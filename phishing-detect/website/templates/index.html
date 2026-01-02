@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing URL Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Phishing URL Detector</h1>
+            <p>Masukkan URL untuk memeriksa keamanannya</p>
+        </header>
+
+        <main class="card">
+            <div class="input-group">
+                <input type="text" id="urlInput" placeholder="https://example.com" autocomplete="off">
+            </div>
+            
+            <button id="checkBtn" class="btn-primary">
+                <span class="btn-text">Cek URL</span>
+                <div class="loader-spinner" id="loader"></div>
+            </button>
+
+            <div id="resultArea" class="result-container hidden">
+                <div class="result-icon" id="resultIcon"></div>
+                <h2 id="resultText"></h2>
+                <p id="resultDesc"></p>
+            </div>
+        </main>
+        
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
